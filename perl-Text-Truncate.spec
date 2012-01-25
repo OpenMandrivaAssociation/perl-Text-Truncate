@@ -1,20 +1,19 @@
-%define upstream_name    Text-Truncate
-%define upstream_version 1.04
+%define	module	Text-Truncate
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Name:		perl-%{module}
+Version:	1.04
+Release:	1
 
-Summary:    Perl module with simple string truncating routine
-License:    GPL+ or Artistic
-Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Text/%{upstream_name}-%{upstream_version}.tar.gz
+Summary:	Perl module with simple string truncating routine
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{module}
+Source0:	http://www.cpan.org/modules/by-module/Text/%{module}-%{version}.tar.gz
 
-BuildRequires: perl(Carp)
-BuildRequires: perl(Test::More)
-BuildRequires: perl(Module::Build::Compat)
-BuildArch: noarch
+BuildRequires:	perl(Carp)
+BuildRequires:	perl(Test::More)
+BuildRequires:	perl(Module::Build::Compat)
+BuildArch:	noarch
 
 
 %description
@@ -27,7 +26,7 @@ but then again, I use it so often that it might as well be in a module.)
 The synopsis gives examples of how to use it.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{module}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -38,18 +37,9 @@ The synopsis gives examples of how to use it.
 %make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
-%clean
-rm -rf %buildroot
-
 %files
-%defattr(-,root,root)
 %doc README Changes META.yml
 %{_mandir}/man3/*
-%perl_vendorlib/*
-
-
-
-
+%{perl_vendorlib}/*
