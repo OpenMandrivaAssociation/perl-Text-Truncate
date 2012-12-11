@@ -10,6 +10,7 @@ Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}
 Source0:	http://www.cpan.org/modules/by-module/Text/%{module}-%{version}.tar.gz
 
+BuildRequires:	perl-devel
 BuildRequires:	perl(Carp)
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Module::Build::Compat)
@@ -29,8 +30,7 @@ The synopsis gives examples of how to use it.
 %setup -q -n %{module}-%{version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
@@ -43,3 +43,19 @@ The synopsis gives examples of how to use it.
 %doc README Changes META.yml
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
+
+%changelog
+* Wed Jan 25 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 1.04-1
++ Revision: 768269
+- adapt to mandriva
+- imported package perl-Text-Truncate
+
+
+* Tue Jan 18 2011 jquelin <jquelin> 1.40.0-1.mga1
++ Revision: 22973
+- cleaning spec file
+- imported package perl-Text-Truncate
+
+
+* Fri Jan 14 2011 cpan2dist 1.04-1mdv
+- initial mdv release, generated with cpan2dist
