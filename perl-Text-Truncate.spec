@@ -27,7 +27,7 @@ but then again, I use it so often that it might as well be in a module.)
 The synopsis gives examples of how to use it.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -qn Text-Truncate-1.05
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
