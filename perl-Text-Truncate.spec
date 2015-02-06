@@ -2,7 +2,7 @@
 
 Name:		perl-%{module}
 Version:	%perl_convert_version 1.06
-Release:	2
+Release:	3
 
 Summary:	Perl module with simple string truncating routine
 License:	GPL+ or Artistic
