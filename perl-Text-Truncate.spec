@@ -7,7 +7,7 @@ Release:	3
 Summary:	Perl module with simple string truncating routine
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{module}
+Url:		https://search.cpan.org/dist/%{module}
 Source0:	http://www.cpan.org/modules/by-module/Text/Text-Truncate-1.06.tar.gz
 
 BuildRequires:	perl-devel
