@@ -10,6 +10,7 @@ Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{module}
 Source0:	http://www.cpan.org/modules/by-module/Text/Text-Truncate-1.06.tar.gz
 
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	perl(Carp)
 BuildRequires:	perl(Test::More)
