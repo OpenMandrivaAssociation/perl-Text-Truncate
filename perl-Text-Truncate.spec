@@ -1,14 +1,14 @@
 %define	module	Text-Truncate
 
 Name:		perl-%{module}
-Version:	%perl_convert_version 1.06
-Release:	3
+Version:	1.06
+Release:	4
 
 Summary:	Perl module with simple string truncating routine
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{module}
-Source0:	http://www.cpan.org/modules/by-module/Text/Text-Truncate-1.06.tar.gz
+Url:		https://github.com/ileiva/Text-Truncate
+Source0:	https://cpan.metacpan.org/authors/id/I/IL/ILV/Text-Truncate-1.06.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
